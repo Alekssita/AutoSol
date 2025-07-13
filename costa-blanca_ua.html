@@ -54,7 +54,7 @@
             <div class="location-content">
                 <h2>Оренда авто у Коста-Бланці</h2>
                 <p>Подорожуйте мальовничим узбережжям Коста-Бланки з комфортом! Обирайте автомобіль із нашого автопарку та насолоджуйтесь свободою пересування по Аліканте, Торрев’єсі, Бенідорму та іншим містах.</p>
-                <p class="pickup-location"><img src="images/location.svg" alt="Іконка розташування для видачі автомобілів"><strong>Адреса видачі:</strong> <a href="https://www.google.com/maps/search/?api=1&query=Calle+Nazar%C3%ADes+1%2C+Orihuela" target="_blank">Calle Nazaríes 1, Orihuela</a></p>
+                <p class="pickup-location"><img src="images/location.svg" alt="Іконка розташування для видачі автомобілів"><strong>Адреса видачі:</strong> <a href="https://www.google.com/maps/search/?api=1&query=Calle+Nazar%C3%ADes+1%2C+Orihuela" target="_blank">Calle Nazaríes 1, Orihuela;<br>Доставка по регіону</a></p>
             </div>
         </div>
     </section>
@@ -64,6 +64,25 @@
     <section class="fleet-section">
         <h2>Наш автопарк</h2>
         <div class="fleet-list">
+            <!-- Toyota Prius -->
+            <div class="car-card">
+                <div class="swiper car-slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="images/prius.jpg" alt="Toyota Prius передній вигляд" loading="lazy"></div>
+                        <div class="swiper-slide"><img src="images/prius2.jpg" alt="Toyota Prius бічний вигляд" loading="lazy"></div>
+                        <div class="swiper-slide"><img src="images/prius3.jpg" alt="Toyota Prius задній вигляд" loading="lazy"></div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+                <h3>Toyota Prius</h3>
+                <p>(доступна у трьох кольорах)</p>
+                <p>Автомат • Гібрид | Бензин</p>
+                <p>3–7 днів — 35€/доба<br>8–15 днів — 30€/доба<br>Місяць — 700€</p>
+                <p>🗺 Аліканте, Торрев'єха, Бенідорм, Кальпе, Мурсія, Картахена</p>
+                <a class="contact-btn" href="#" onclick="openBookingModal('Toyota Prius')">Забронювати</a>
+            </div>
+
             <!-- Toyota RAV4 -->
             <div class="car-card">
                 <div class="swiper car-slider">
@@ -80,42 +99,6 @@
                 <p>3–7 днів — 40€/доба<br>8–15 днів — 35€/доба<br>Місяць — 750€</p>
                 <p>🗺 Аліканте, Торрев'єха, Бенідорм, Кальпе, Мурсія, Картахена</p>
                 <a class="contact-btn" href="#" onclick="openBookingModal('Toyota RAV 4')">Забронювати</a>
-            </div>
-
-            <!-- Toyota AURIS -->
-            <div class="car-card">
-                <div class="swiper car-slider">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img src="images/auris.jpg" alt="Toyota Auris передній вигляд" loading="lazy"></div>
-                        <div class="swiper-slide"><img src="images/auris2.jpg" alt="Toyota Auris бічний вигляд" loading="lazy"></div>
-                        <div class="swiper-slide"><img src="images/auris3.jpg" alt="Toyota Auris задній вигляд" loading="lazy"></div>
-                    </div>
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
-                </div>
-                <h3>Toyota AURIS</h3>
-                <p>Автомат • Гібрид | Бензин</p>
-                <p>3–7 днів — 45€/доба<br>8–15 днів — 40€/доба<br>Місяць — 750€</p>
-                <p>🗺 Аліканте, Торрев'єха, Бенідорм, Кальпе, Мурсія, Картахена</p>
-                <a class="contact-btn" href="#" onclick="openBookingModal('Toyota AURIS')">Забронювати</a>
-            </div>
-
-            <!-- Toyota Prius -->
-            <div class="car-card">
-                <div class="swiper car-slider">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img src="images/prius.jpg" alt="Toyota Prius передній вигляд" loading="lazy"></div>
-                        <div class="swiper-slide"><img src="images/prius2.jpg" alt="Toyota Prius бічний вигляд" loading="lazy"></div>
-                        <div class="swiper-slide"><img src="images/prius3.jpg" alt="Toyota Prius задній вигляд" loading="lazy"></div>
-                    </div>
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
-                </div>
-                <h3>Toyota Prius</h3>
-                <p>Автомат • Гібрид | Бензин</p>
-                <p>3–7 днів — 40€/доба<br>8–15 днів — 35€/доба<br>Місяць — 700€</p>
-                <p>🗺 Аліканте, Торрев'єха, Бенідорм, Кальпе, Мурсія, Картахена</p>
-                <a class="contact-btn" href="#" onclick="openBookingModal('Toyota Prius')">Забронювати</a>
             </div>
 
             <!-- Lexus CT200 -->
@@ -136,42 +119,6 @@
                 <a class="contact-btn" href="#" onclick="openBookingModal('Lexus CT200')">Забронювати</a>
             </div>
 
-            <!-- BMW 6 Cabrio -->
-            <div class="car-card">
-                <div class="swiper car-slider">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img src="images/bmw.jpg" alt="BMW 6 Cabrio передній вигляд" loading="lazy"></div>
-                        <div class="swiper-slide"><img src="images/bmw2.jpg" alt="BMW 6 Cabrio бічний вигляд" loading="lazy"></div>
-                        <div class="swiper-slide"><img src="images/bmw3.jpg" alt="BMW 6 Cabrio задній вигляд" loading="lazy"></div>
-                    </div>
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
-                </div>
-                <h3>BMW 6 Cabrio</h3>
-                <p>Автомат • Дизель</p>
-                <p>3–7 днів — 150€/доба<br>8–15 днів — 130€/доба<br>Місяць — 3000€</p>
-                <p>🗺 Аліканте, Торрев'єха, Бенідорм, Кальпе, Мурсія, Картахена</p>
-                <a class="contact-btn" href="#" onclick="openBookingModal('BMW 6 Cabrio')">Забронювати</a>
-            </div>
-
-            <!-- Ford Fusion -->
-            <div class="car-card">
-                <div class="swiper car-slider">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img src="images/ford.jpg" alt="Ford Fusion передній вигляд" loading="lazy"></div>
-                        <div class="swiper-slide"><img src="images/ford1.jpg" alt="Ford Fusion бічний вигляд" loading="lazy"></div>
-                        <div class="swiper-slide"><img src="images/ford3.jpg" alt="Ford Fusion задній вигляд" loading="lazy"></div>
-                    </div>
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
-                </div>
-                <h3>Ford FUSION</h3>
-                <p>Автомат • Бензин</p>
-                <p>3–7 днів — 50€/доба<br>8–15 днів — 45€/доба<br>Місяць — 1050€</p>
-                <p>🗺 Аліканте, Торрев'єха, Бенідорм, Кальпе, Мурсія, Картахена</p>
-                <a class="contact-btn" href="#" onclick="openBookingModal('Ford FUSION')">Забронювати</a>
-            </div>
-
             <!-- Fiat 500 Cabrio -->
             <div class="car-card">
                 <div class="swiper car-slider">
@@ -190,6 +137,63 @@
                 <a class="contact-btn" href="#" onclick="openBookingModal('Fiat 500 Cabrio')">Забронювати</a>
             </div>
 
+            <!-- Toyota AURIS -->
+            <div class="car-card">
+                <div class="swiper car-slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="images/auris.jpg" alt="Toyota Auris передній вигляд" loading="lazy"></div>
+                        <div class="swiper-slide"><img src="images/auris2.jpg" alt="Toyota Auris бічний вигляд" loading="lazy"></div>
+                        <div class="swiper-slide"><img src="images/auris3.jpg" alt="Toyota Auris задній вигляд" loading="lazy"></div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+                <h3>Toyota AURIS</h3>
+                <p>Автомат • Гібрид | Бензин</p>
+                <p>3–7 днів — 45€/доба<br>8–15 днів — 40€/доба<br>Місяць — 750€</p>
+                <p>🗺 Аліканте, Торрев'єха, Бенідорм, Кальпе, Мурсія, Картахена</p>
+                <a class="contact-btn" href="#" onclick="openBookingModal('Toyota AURIS')">Забронювати</a>
+            </div>
+
+            <!-- Ford Fusion -->
+            <div class="car-card">
+                <div class="swiper car-slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="images/ford.jpg" alt="Ford Fusion передній вигляд" loading="lazy"></div>
+                        <div class="swiper-slide"><img src="images/ford1.jpg" alt="Ford Fusion бічний вигляд" loading="lazy"></div>
+                        <div class="swiper-slide"><img src="images/ford3.jpg" alt="Ford Fusion задній вигляд" loading="lazy"></div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+                <h3>Ford FUSION</h3>
+                <p>Автомат • Бензин</p>
+                <p>3–7 днів — 50€/доба<br>8–15 днів — 45€/доба<br>Місяць — 1050€</p>
+                <p>🗺 Аліканте, Торрев'єха, Бенідорм, Кальпе, Мурсія, Картахена</p>
+                <a class="contact-btn" href="#" onclick="openBookingModal('Ford FUSION')">Забронювати</a>
+            </div>    
+                        
+            <!-- BMW 6 Cabrio -->
+            <div class="car-card">
+                <div class="swiper car-slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="images/bmw.jpg" alt="BMW 6 Cabrio передній вигляд" loading="lazy"></div>
+                        <div class="swiper-slide"><img src="images/bmw2.jpg" alt="BMW 6 Cabrio бічний вигляд" loading="lazy"></div>
+                        <div class="swiper-slide"><img src="images/bmw3.jpg" alt="BMW 6 Cabrio задній вигляд" loading="lazy"></div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+                <h3>BMW 6 Cabrio</h3>
+                <p>Автомат • Дизель</p>
+                <p>3–7 днів — 150€/доба<br>8–15 днів — 130€/доба<br>Місяць — 3000€</p>
+                <p>🗺 Аліканте, Торрев'єха, Бенідорм, Кальпе, Мурсія, Картахена</p>
+                <a class="contact-btn" href="#" onclick="openBookingModal('BMW 6 Cabrio')">Забронювати</a>
+            </div>
+
+            
+
+            
             <!-- Контейнер для повноекранного слайдера -->
             <div class="fullscreen-slider" id="fullscreenSlider">
                 <div class="swiper fullscreen-swiper">

@@ -54,7 +54,7 @@
             <div class="location-content">
                 <h2>Alquiler de coches en Costa Blanca</h2>
                 <p>¡Viaje por la pintoresca costa de la Costa Blanca con comodidad! Elija un coche de nuestro parque automovilístico y disfrute de la libertad de moverse por Alicante, Torrevieja, Benidorm y otras ciudades.</p>
-                <p class="pickup-location"><img src="images/location.svg" alt="Ícono de ubicación para la entrega de coches"><strong>Dirección de entrega:</strong> <a href="https://www.google.com/maps/search/?api=1&query=Calle+Nazar%C3%ADes+1%2C+Orihuela" target="_blank">Calle Nazaríes 1, Orihuela</a></p>
+                <p class="pickup-location"><img src="images/location.svg" alt="Ícono de ubicación para la entrega de coches"><strong>Dirección de entrega:</strong> <a href="https://www.google.com/maps/search/?api=1&query=Calle+Nazar%C3%ADes+1%2C+Orihuela" target="_blank">Calle Nazaríes 1, Orihuela<br>Entrega en la región</a></p>
             </div>
         </div>
     </section>
@@ -64,6 +64,26 @@
     <section class="fleet-section">
         <h2>Nuestra flota</h2>
         <div class="fleet-list">
+
+            <!-- Toyota Prius -->
+            <div class="car-card">
+                <div class="swiper car-slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="images/prius.jpg" alt="Toyota Prius vista frontal" loading="lazy"></div>
+                        <div class="swiper-slide"><img src="images/prius2.jpg" alt="Toyota Prius vista lateral" loading="lazy"></div>
+                        <div class="swiper-slide"><img src="images/prius3.jpg" alt="Toyota Prius vista trasera" loading="lazy"></div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+                <h3>Toyota Prius</h3>
+                <p>(disponible en tres colores)</p>
+                <p>Automático • Híbrido | Gasolina</p>
+                <p>3–7 días — 35€/día<br>8–15 días — 30€/día<br>Mes — 700€</p>
+                <p>🗺 Alicante, Torrevieja, Benidorm, Calpe, Murcia, Cartagena</p>
+                <a class="contact-btn" href="#" onclick="openBookingModal('Toyota Prius')">Reservar</a>
+            </div>
+
             <!-- Toyota RAV4 -->
             <div class="car-card">
                 <div class="swiper car-slider">
@@ -80,42 +100,6 @@
                 <p>3–7 días — 40€/día<br>8–15 días — 35€/día<br>Mes — 750€</p>
                 <p>🗺 Alicante, Torrevieja, Benidorm, Calpe, Murcia, Cartagena</p>
                 <a class="contact-btn" href="#" onclick="openBookingModal('Toyota RAV 4')">Reservar</a>
-            </div>
-
-            <!-- Toyota AURIS -->
-            <div class="car-card">
-                <div class="swiper car-slider">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img src="images/auris.jpg" alt="Toyota Auris vista frontal" loading="lazy"></div>
-                        <div class="swiper-slide"><img src="images/auris2.jpg" alt="Toyota Auris vista lateral" loading="lazy"></div>
-                        <div class="swiper-slide"><img src="images/auris3.jpg" alt="Toyota Auris vista trasera" loading="lazy"></div>
-                    </div>
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
-                </div>
-                <h3>Toyota AURIS</h3>
-                <p>Automático • Híbrido | Gasolina</p>
-                <p>3–7 días — 45€/día<br>8–15 días — 40€/día<br>Mes — 750€</p>
-                <p>🗺 Alicante, Torrevieja, Benidorm, Calpe, Murcia, Cartagena</p>
-                <a class="contact-btn" href="#" onclick="openBookingModal('Toyota AURIS')">Reservar</a>
-            </div>
-
-            <!-- Toyota Prius -->
-            <div class="car-card">
-                <div class="swiper car-slider">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img src="images/prius.jpg" alt="Toyota Prius vista frontal" loading="lazy"></div>
-                        <div class="swiper-slide"><img src="images/prius2.jpg" alt="Toyota Prius vista lateral" loading="lazy"></div>
-                        <div class="swiper-slide"><img src="images/prius3.jpg" alt="Toyota Prius vista trasera" loading="lazy"></div>
-                    </div>
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
-                </div>
-                <h3>Toyota Prius</h3>
-                <p>Automático • Híbrido | Gasolina</p>
-                <p>3–7 días — 40€/día<br>8–15 días — 35€/día<br>Mes — 700€</p>
-                <p>🗺 Alicante, Torrevieja, Benidorm, Calpe, Murcia, Cartagena</p>
-                <a class="contact-btn" href="#" onclick="openBookingModal('Toyota Prius')">Reservar</a>
             </div>
 
             <!-- Lexus CT200 -->
@@ -136,22 +120,40 @@
                 <a class="contact-btn" href="#" onclick="openBookingModal('Lexus CT200')">Reservar</a>
             </div>
 
-            <!-- BMW 6 Cabrio -->
+            <!-- Fiat 500 Cabrio -->
             <div class="car-card">
                 <div class="swiper car-slider">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img src="images/bmw.jpg" alt="BMW 6 Cabrio vista frontal" loading="lazy"></div>
-                        <div class="swiper-slide"><img src="images/bmw2.jpg" alt="BMW 6 Cabrio vista lateral" loading="lazy"></div>
-                        <div class="swiper-slide"><img src="images/bmw3.jpg" alt="BMW 6 Cabrio vista trasera" loading="lazy"></div>
+                        <div class="swiper-slide"><img src="images/fiat.jpg" alt="Fiat 500 Cabrio vista frontal" loading="lazy"></div>
+                        <div class="swiper-slide"><img src="images/fiat1.jpg" alt="Fiat 500 Cabrio vista lateral" loading="lazy"></div>
+                        <div class="swiper-slide"><img src="images/fiat2.jpg" alt="Fiat 500 Cabrio vista trasera" loading="lazy"></div>
                     </div>
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
                 </div>
-                <h3>BMW 6 Cabrio</h3>
-                <p>Automático • Diésel</p>
-                <p>3–7 días — 150€/día<br>8–15 días — 130€/día<br>Mes — 3000€</p>
+                <h3>Fiat 500 Cabrio</h3>
+                <p>Automático • Gasolina</p>
+                <p>3–7 días — 40€/día<br>8–15 días — 35€/día<br>Mes — 750€</p>
                 <p>🗺 Alicante, Torrevieja, Benidorm, Calpe, Murcia, Cartagena</p>
-                <a class="contact-btn" href="#" onclick="openBookingModal('BMW 6 Cabrio')">Reservar</a>
+                <a class="contact-btn" href="#" onclick="openBookingModal('Fiat 500 Cabrio')">Reservar</a>
+            </div>
+
+            <!-- Toyota AURIS -->
+            <div class="car-card">
+                <div class="swiper car-slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="images/auris.jpg" alt="Toyota Auris vista frontal" loading="lazy"></div>
+                        <div class="swiper-slide"><img src="images/auris2.jpg" alt="Toyota Auris vista lateral" loading="lazy"></div>
+                        <div class="swiper-slide"><img src="images/auris3.jpg" alt="Toyota Auris vista trasera" loading="lazy"></div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+                <h3>Toyota AURIS</h3>
+                <p>Automático • Híbrido | Gasolina</p>
+                <p>3–7 días — 45€/día<br>8–15 días — 40€/día<br>Mes — 750€</p>
+                <p>🗺 Alicante, Torrevieja, Benidorm, Calpe, Murcia, Cartagena</p>
+                <a class="contact-btn" href="#" onclick="openBookingModal('Toyota AURIS')">Reservar</a>
             </div>
 
             <!-- Ford Fusion -->
@@ -170,25 +172,26 @@
                 <p>3–7 días — 50€/día<br>8–15 días — 45€/día<br>Mes — 1050€</p>
                 <p>🗺 Alicante, Torrevieja, Benidorm, Calpe, Murcia, Cartagena</p>
                 <a class="contact-btn" href="#" onclick="openBookingModal('Ford FUSION')">Reservar</a>
-            </div>
+            </div>                     
 
-            <!-- Fiat 500 Cabrio -->
+            <!-- BMW 6 Cabrio -->
             <div class="car-card">
                 <div class="swiper car-slider">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img src="images/fiat.jpg" alt="Fiat 500 Cabrio vista frontal" loading="lazy"></div>
-                        <div class="swiper-slide"><img src="images/fiat1.jpg" alt="Fiat 500 Cabrio vista lateral" loading="lazy"></div>
-                        <div class="swiper-slide"><img src="images/fiat2.jpg" alt="Fiat 500 Cabrio vista trasera" loading="lazy"></div>
+                        <div class="swiper-slide"><img src="images/bmw.jpg" alt="BMW 6 Cabrio vista frontal" loading="lazy"></div>
+                        <div class="swiper-slide"><img src="images/bmw2.jpg" alt="BMW 6 Cabrio vista lateral" loading="lazy"></div>
+                        <div class="swiper-slide"><img src="images/bmw3.jpg" alt="BMW 6 Cabrio vista trasera" loading="lazy"></div>
                     </div>
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
                 </div>
-                <h3>Fiat 500 Cabrio</h3>
-                <p>Automático • Gasolina</p>
-                <p>3–7 días — 40€/día<br>8–15 días — 35€/día<br>Mes — 750€</p>
+                <h3>BMW 6 Cabrio</h3>
+                <p>Automático • Diésel</p>
+                <p>3–7 días — 150€/día<br>8–15 días — 130€/día<br>Mes — 3000€</p>
                 <p>🗺 Alicante, Torrevieja, Benidorm, Calpe, Murcia, Cartagena</p>
-                <a class="contact-btn" href="#" onclick="openBookingModal('Fiat 500 Cabrio')">Reservar</a>
-            </div>
+                <a class="contact-btn" href="#" onclick="openBookingModal('BMW 6 Cabrio')">Reservar</a>
+            </div>          
+            
 
             <!-- Contenedor para el carrusel a pantalla completa -->
             <div class="fullscreen-slider" id="fullscreenSlider">
