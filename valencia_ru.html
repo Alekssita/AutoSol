@@ -1,0 +1,382 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="Аренда авто в Валенсии | Прокат по доступным ценам">
+    <meta name="description" content="Аренда авто в Валенсии: широкий выбор автомобилей по доступным ценам. Прокат в Валенсии, Аликанте, Торревьехе. Бронирование через WhatsApp, поддержка 24/7.">
+    <meta name="keywords" content="аренда авто Валенсия, прокат авто Валенсия, аренда автомобилей Испания, дешевый прокат авто Валенсия, прокат авто Аликанте, Торревьеха">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Car Rental Spain">
+    <meta property="og:description" content="Забронируйте авто в Валенсии: широкий выбор машин, доступные цены, удобное бронирование через WhatsApp. Доступно в Аликанте, Торревьехе.">
+    <title>Аренда авто в Валенсии | Прокат автомобилей по доступным ценам</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/lightbox2@2.11.4/dist/css/lightbox.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+</head>
+<body>
+    <!-- Хедер -->
+    <header class="header container">
+        <div class="logo"></div>
+        <button class="burger-menu" aria-label="Toggle menu">
+            <span class="burger-icon"></span>
+        </button>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="index_ru.html">Главная</a></li>
+                <li><a href="valencia_ru.html">Валенсия</a></li>
+                <li><a href="costa-blanca_ru.html">Коста-Бланка</a></li>
+                <li><a href="andalusia_ru.html">Андалусия</a></li>
+            </ul>
+        </nav>
+        <div class="contact-icons">
+            <a href="https://wa.me/+34643330661" class="icon wa"><img src="images/whatsapp.svg" alt="WhatsApp"></a>
+            <div class="lang-switcher">
+                <div class="lang-switcher-wrapper">
+                    <select id="language-select">
+                        <option value="ua">UA</option>
+                        <option value="ru" selected>RU</option>
+                        <option value="es">ES</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Блок приветствия -->
+<section class="regions">
+    <div class="location-container">
+      <div class="location-image">
+          <img src="images/valencia-bg.jpg" alt="Валенсія" loading="lazy">
+      </div>
+      <div class="location-content">
+        <h2>Аренда авто в Валенсии</h2>
+        <p>Путешествуйте по живописной Валенсии с комфортом! Выбирайте автомобиль из нашего автопарка и наслаждайтесь свободой передвижения по солнечному городу и его окрестностям.</p>
+        <p class="pickup-location"><img src="images/location.svg" alt="Иконка местоположения для выдачи автомобилей"><strong>Адрес выдачи авто</strong> <a href="https://www.google.com/maps/search/?api=1&query=Calle+del+Dr.+Álvaro+López+21%2C+46011+Valencia" target="_blank">Calle del Dr. Álvaro López 21, 46011 Valencia</a></p>
+        </div>
+    </div>
+</section>
+   
+    <!-- Галерея -->
+    <section class="fleet-section">
+        <h2>Наш автопарк</h2>
+        <div class="fleet-list">
+            <!-- CITROEN C3 -->
+            <div class="car-card">
+                <div class="swiper car-slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="images/citroenCc3.jpg" alt="Citroen C3 передний вид" loading="lazy"></div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+                <h3>Citroen C3</h3>
+                <p>Механика • Бензин</p>
+                <p>1–3 дня — 28€/день<br>4–13 дней — 25€/день<br>Месяц — 670€</p>
+                <p>Депозит - 200€</p>
+                <a class="contact-btn" href="#" onclick="openBookingModal('Citroen C3')">Забронировать</a>
+            </div>
+
+            <!-- CITROEN C4 -->
+            <div class="car-card">
+                <div class="swiper car-slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="images/citroenc4.jpg" alt="Citroen C4 передний вид" loading="lazy"></div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+                <h3>Citroen C4</h3>
+                <p>Механика • Бензин</p>
+                <p>1–3 дня — 33€/день<br>4–13 дней — 30€/день<br>Месяц — 790€</p>
+                <p>Депозит - 200€</p>
+                <a class="contact-btn" href="#" onclick="openBookingModal('Citroen C4')">Забронировать</a>
+            </div>
+            
+            <!-- RENAULT CAPTUR -->
+            <div class="car-card">
+                <div class="swiper car-slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img id="small_image" src="images/renoult.jpg" alt="Renault Captur передний вид" loading="lazy"></div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+                <h3>Renault Captur</h3>
+                <p>Автомат • Дизель</p>
+                <p>1–3 дня — 40€/день<br>4–13 дней — 36€/день<br>Месяц — 960€</p>
+                <p>Депозит - 200€</p>
+                <a class="contact-btn" href="#" onclick="openBookingModal('Renault Captur')">Забронировать</a>
+            </div>
+            
+            <!-- OPEL ASTRA -->
+            <div class="car-card">
+                <div class="swiper car-slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img id="small_image" src="images/opelastra.jpg" alt="Opel Astra передний вид" loading="lazy"></div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+                <h3>Opel Astra</h3>
+                <p>Автомат • Бензин</p>
+                <p>1–3 дня — 40€/день<br>4–13 дней — 36€/день<br>Месяц — 960€</p>
+                <p>Депозит - 200€</p>
+                <a class="contact-btn" href="#" onclick="openBookingModal('Opel Astra')">Забронировать</a>
+            </div>
+
+            <!-- NISSAN QASHQAI -->
+            <div class="car-card">
+                <div class="swiper car-slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img id="small_image" src="images/nisssan.jpg" alt="Nissan Qashqai передний вид" loading="lazy"></div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+                <h3>Nissan Qashqai</h3>
+                <p>Автомат • Микрогибрид</p>
+                <p>1–3 дня — 50€/день<br>4–13 дней — 45€/день<br>Месяц — 1200€</p>
+                <p>Депозит - 200€</p>
+                <a class="contact-btn" href="#" onclick="openBookingModal('Nissan Qashqai')">Забронировать</a>
+            </div>
+            
+            <!-- Mitsubishi Outlander -->
+            <div class="car-card">
+                <div class="swiper car-slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="images/mitshubisi.jpg" alt="Mitsubishi Outlander передний вид" loading="lazy"></div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+                <h3>Mitsubishi Outlander</h3>
+                <p>Механика • Дизель • 7 мест</p>
+                <p>1–3 дня — 50€/день<br>4–13 дней — 45€/день<br>Месяц — 1200€</p>
+                <p>Депозит - 200€</p>
+                <a class="contact-btn" href="#" onclick="openBookingModal('Mitsubishi Outlander')">Забронировать</a>
+            </div>
+
+            <!-- BMW Series 1 Cabriolet -->
+            <div class="car-card">
+                <div class="swiper car-slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="images/bmwcabr.jpg" alt="BMW Series 1 Cabriolet передний вид" loading="lazy"></div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+                <h3>BMW Series 1 Cabriolet</h3>
+                <p>Механика • Бензин • Спорт</p>
+                <p>1–3 дня — 75€/день<br>4–13 дней — 60€/день<br>Месяц — 1730€</p>
+                <p>Депозит - 300€</p>
+                <a class="contact-btn" href="#" onclick="openBookingModal('BMW Series 1 Cabriolet')">Забронировать</a>
+            </div>
+
+            <!-- Контейнер для полноэкранного слайдера -->
+            <div class="fullscreen-slider" id="fullscreenSlider">
+                <div class="swiper fullscreen-swiper">
+                    <div class="swiper-wrapper" id="fullscreenWrapper"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <button class="fullscreen-close">✕</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Условия -->
+    <section class="rental-conditions">
+        <h2>Условия аренды</h2>
+        <div class="condition-cards">
+            <div class="condition-card">
+                <img src="images/icons8-age-50.png" alt="Возраст">
+                <p><strong>Возраст водителя:</strong> от 21 года</p>
+            </div>
+            <div class="condition-card">
+                <img src="images/icons8-experience-50.png" alt="Стаж">
+                <p><strong>Стаж вождения:</strong> от 2 лет</p>
+            </div>
+            <div class="condition-card">
+                <img src="images/icons8-passport-50.png" alt="Документы">
+                <p><strong>Документы:</strong> TIE, NIE или заграничный паспорт, водительское удостоверение, адрес в Испании</p>
+            </div>
+            <div class="condition-card">
+                <img src="images/icons8-deposit-64.png" alt="Депозит">
+                <p><strong>Депозит:</strong> 200–300 € (возвращается)</p>
+            </div>
+            <div class="condition-card">
+                <img src="images/icons8-insurance-50.png" alt="Страховка">
+                <p><strong>Страхование:</strong> включено в стоимость</p>
+            </div>
+            <div class="condition-card">
+                <img src="images/icons8-speedometer-50.png" alt="Пробег">
+                <p><strong>Пробег:</strong> 200 км/день (до 3 дней), 150 км/день (от 3 дней), 4500 км/месяц</p>
+            </div>
+            <div class="condition-card">
+                <img src="images/icons8-speedometer-50.png" alt="Превышение пробега">
+                <p><strong>Превышение пробега:</strong> 0,20 €/км</p>
+            </div>
+            <div class="condition-card">
+                <img src="images/icons8-cash-50.png" alt="Оплата">
+                <p><strong>Оплата:</strong> наличными</p>
+            </div>
+            <div class="condition-card">
+                <img src="images/icons8-percent-50.png" alt="Скидки">
+                <p><strong>Скидки:</strong> при аренде от 4 дней</p>
+            </div>
+            <div class="condition-card">
+                <img src="images/icons8-clear-50.png" alt="Чистота">
+                <p><strong>Чистота:</strong> возврат чистым, иначе 20 €</p>
+            </div>
+            <div class="condition-card">
+                <img src="images/icons8-warning-50.png" alt="Ограничения">
+                <p><strong>Ограничения:</strong> выезд за пределы Испании запрещен</p>
+            </div>
+            <div class="condition-card">
+                <img src="images/icons8-time-80.png" alt="Возврат">
+                <p><strong>Ранний возврат:</strong> средства не возвращаются</p>
+            </div>
+        </div>
+    </section>
+    <!-- Всплывающее уведомление -->
+    <div id="popupNotification" class="popup-notification" style="display: none;">
+        <div class="popup-content">
+            <span class="close" id="closePopup">×</span>
+
+            <p>❗️ Не нашли автомобиль? Напишите мне — подберу нужный!</p>
+            <button class="btn" id="contactButton">Связаться</button>
+        </div>
+    </div>
+
+    <!-- Модальное окно для бронирования -->
+    <div id="bookingModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close" id="closeBookingModal">×</span>
+            <h2>Бронирование автомобиля</h2>
+            <form id="bookingForm">
+                <label for="bookingDateFrom">Дата и время (с):</label>
+                <input type="datetime-local" id="bookingDateFrom" name="bookingDateFrom" required>
+                <label for="bookingDateTo">Дата и время (по):</label>
+                <input type="datetime-local" id="bookingDateTo" name="bookingDateTo" required>
+                <textarea id="message" name="message" readonly></textarea>
+                <div class="button-group">
+                    <button type="button" class="btn" id="whatsappButton">WhatsApp</button>
+                    <button type="button" class="btn" id="telegramButton">Telegram</button>
+                    <button type="button" class="btn" id="mobileButton">Мобильный</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Модальное окно для контакта -->
+    <div id="contactModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close" id="closeContactModal">×</span>
+            <h2>Связаться с нами</h2>
+            <div class="button-group">
+                <button type="button" class="btn" id="contactWhatsappButton">WhatsApp</button>
+                <button type="button" class="btn" id="contactTelegramButton">Telegram</button>
+                <button type="button" class="btn" id="contactMobileButton">Мобильный</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <!-- Футер -->
+    <footer class="footer">
+        <p>Контакты: +3463330661 | valencia.aleksa@gmail.com</p>
+        <p>© 2025 Car Rental Spain. Все права защищены.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script>
+        document.querySelectorAll('.car-slider').forEach((el) => {
+            new Swiper(el, {
+                loop: true,
+                navigation: {
+                    nextEl: el.querySelector('.swiper-button-next'),
+                    prevEl: el.querySelector('.swiper-button-prev'),
+                },
+            });
+        });
+
+        // Инициализация всех слайдеров на странице
+        const sliders = document.querySelectorAll('.car-slider');
+        sliders.forEach(slider => {
+            new Swiper(slider, {
+                loop: true,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            });
+        });
+
+        // Функция для открытия полноэкранного слайдера
+        function openFullscreenSlider(images, initialSlide) {
+            const fullscreenSlider = document.getElementById('fullscreenSlider');
+            const fullscreenWrapper = document.getElementById('fullscreenWrapper');
+
+            // Очищаем предыдущее содержимое
+            fullscreenWrapper.innerHTML = '';
+
+            // Добавляем изображения в полноэкранный слайдер
+            images.forEach(image => {
+                const slide = document.createElement('div');
+                slide.classList.add('swiper-slide');
+                slide.innerHTML = `<img src="${image.src}" alt="${image.alt}">`;
+                fullscreenWrapper.appendChild(slide);
+            });
+
+            // Показываем полноэкранный слайдер
+            fullscreenSlider.classList.add('active');
+
+            // Инициализируем Swiper для полноэкранного слайдера
+            const fullscreenSwiper = new Swiper('.fullscreen-swiper', {
+                loop: true,
+                initialSlide: initialSlide,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            });
+        }
+
+        // Функция для закрытия полноэкранного слайдера
+        function closeFullscreenSlider() {
+            const fullscreenSlider = document.getElementById('fullscreenSlider');
+            fullscreenSlider.classList.remove('active');
+        }
+
+        // Добавляем обработчик кликов на изображения
+        document.querySelectorAll('.car-slider .swiper-slide img').forEach((img, index, images) => {
+            img.addEventListener('click', () => {
+                // Получаем все изображения из текущего слайдера
+                const parentSlider = img.closest('.car-slider');
+                const sliderImages = parentSlider.querySelectorAll('.swiper-slide img');
+                openFullscreenSlider(sliderImages, index);
+            });
+        });
+
+        // Обработчик для кнопки закрытия
+        document.querySelector('.fullscreen-close').addEventListener('click', closeFullscreenSlider);
+
+        // Burger menu toggle
+        const burgerMenu = document.querySelector('.burger-menu');
+        const navMenu = document.querySelector('.nav-menu');
+
+        burgerMenu.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            burgerMenu.classList.toggle('active');
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/lightbox2@2.11.4/dist/js/lightbox.min.js"></script>
+    <script src="js/language-switcher.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,218 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Аренда автомобилей в Испании</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/faq.js"></script>
+    <meta name="description" content="Аренда автомобилей в Испании: Валенсия, Коста-Бланка, Андалусия. Доступные цены, быстрое бронирование, поддержка 24/7.">
+    <meta name="keywords" content="аренда авто Испания, прокат автомобилей Валенсия, Коста-Бланка, Андалусия">
+    <meta name="author" content="Car Rental Spain">
+    <meta name="robots" content="index, follow">
+</head>
+<script src="js/language-switcher.js"></script>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="logo"></div>
+        <button class="burger-menu" aria-label="Toggle menu">
+            <span class="burger-icon"></span>
+        </button>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="index_ru.html">Главная</a></li>
+                <li><a href="valencia_ru.html">Валенсия</a></li>
+                <li><a href="costa-blanca_ru.html">Коста-Бланка</a></li>
+                <li><a href="andalusia_ru.html">Андалусия</a></li>
+            </ul>
+        </nav>
+        <div class="contact-icons">
+            <a href="https://wa.me/+34643330661" class="icon wa"><img src="images/whatsapp.svg" alt="WhatsApp"></a>
+            <div class="lang-switcher">
+                <div class="lang-switcher-wrapper">
+                    <select id="language-select">
+                        <option value="ua">UA</option>
+                        <option value="ru" selected>RU</option>
+                        <option value="es">ES</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Welcome Section -->
+    <section class="welcome">
+        <h1>Аренда авто в Испании – просто и удобно!</h1>
+        <p>Арендуйте автомобиль в Валенсии, Коста-Бланке или Андалусии. Широкий выбор авто, прозрачные цены, быстрое бронирование через Telegram или WhatsApp, поддержка 24/7. Забронируйте сейчас и откройте Испанию на своих условиях!</p>
+    </section>
+
+    <!-- Region Selection Section -->
+    <section class="regions">
+        <h2>Выберите регион</h2>
+        <div class="region-cards">
+            <a href="valencia_ru.html" class="region-card">
+                <img src="images/valencia.jpg" alt="Аренда авто в Валенсии">
+                <h3>Валенсия</h3>
+                <p>Солнечный город с богатой культурой и живописными пляжами.</p>
+            </a>
+            <a href="costa-blanca_ru.html" class="region-card">
+                <img src="images/costa-blanca.jpg" alt="Аренда авто на Коста-Бланке">
+                <h3>Коста-Бланка</h3>
+                <p>Белоснежные пляжи и кристально чистое море.</p>
+            </a>
+            <a href="andalusia_ru.html" class="region-card">
+                <img src="images/andalucia.jpg" alt="Аренда авто в Андалусии">
+                <h3>Андалусия</h3>
+                <p>Исторические города, фламенко и уникальная архитектура.</p>
+            </a>
+        </div>
+    </section>
+
+    <!-- Advantages Section with Slider -->
+    <section class="advantages">
+        <h2>Почему выбирают нас?</h2>
+        <div class="slider">
+            <div class="slider-container" id="sliderContainer">
+                <div class="advantage-item">
+                    <img src="images/time-left.png" alt="">
+                    <h3>Быстрое оформление</h3>
+                    <p>Минимум бюрократии, максимум удобства</p>
+                </div>
+                <div class="advantage-item">
+                    <img src="images/price-tag.png" alt="">
+                    <h3>Прозрачные цены</h3>
+                    <p>Без скрытых платежей — только честные условия</p>
+                </div>
+                <div class="advantage-item">
+                    <img src="images/customer-service.png" alt="">
+                    <h3>Поддержка 24/7</h3>
+                    <p>Всегда на связи в любое время</p>
+                </div>
+                <div class="advantage-item">
+                    <img src="images/dependable.png" alt="">
+                    <h3>Страхование включено</h3>
+                    <p>Спокойствие во время путешествия — авто застраховано</p>
+                </div>
+                <div class="advantage-item">
+                    <img src="images/car-insurance.png" alt="">
+                    <h3>Надежный сервис</h3>
+                    <p>Тысячи довольных клиентов по всей Испании</p>
+                </div>
+            </div>
+            <button class="slider-btn prev" onclick="prevSlide()">‹</button>
+            <button class="slider-btn next" onclick="nextSlide()">›</button>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <h2>Часто задаваемые вопросы об аренде авто</h2>
+        <div class="faq-list">
+            <div class="faq-item">
+                <button class="faq-question">
+                    Какие документы нужны для аренды?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Вам понадобятся водительское удостоверение, паспорт/DNI/NIE/TIE, адрес проживания.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    Можно ли получить авто в аэропорту?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Да, мы доставляем авто в аэропорты Валенсии, Аликанте за дополнительную плату. В аэропорт Малага бесплатно.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    Какие условия страхования?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Все авто застрахованы, базовое страхование включено в стоимость аренды.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div id="contactModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close" id="closeContactModal">×</span>
+            <h2>Связаться с нами</h2>
+            <div class="button-group">
+                <button type="button" class="btn" id="contactWhatsappButton">WhatsApp</button>
+                <button type="button" class="btn" id="contactTelegramButton">Telegram</button>
+                <button type="button" class="btn" id="contactMobileButton">Мобильный</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Not Found Section -->
+    <section class="not-found">
+        <h2>Не нашли авто?</h2>
+        <p>Свяжитесь с нами, и мы подберем идеальный вариант для вашего путешествия!</p>
+        <a href="#" class="contact-btn" id="contactButton">Связаться</a>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>Контакты: +3463330661 | valencia.aleksa@gmail.com</p>
+        <p>© 2025 Car Rental Spain. Все права защищены.</p>
+    </footer>
+
+    <script>
+        const sliderContainer = document.querySelector('.slider-container');
+        const slides = document.querySelectorAll('.advantage-item');
+        const prevBtn = document.querySelector('.slider-btn.prev');
+        const nextBtn = document.querySelector('.slider-btn.next');
+
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            sliderContainer.style.transform = `translateX(-${index * 100}%)`;
+        }
+
+        prevBtn.addEventListener('click', () => {
+            currentSlide = (currentSlide > 0) ? currentSlide - 1 : slides.length - 1;
+            showSlide(currentSlide);
+        });
+
+        nextBtn.addEventListener('click', () => {
+            currentSlide = (currentSlide < slides.length - 1) ? currentSlide + 1 : 0;
+            showSlide(currentSlide);
+        });
+
+        // ❌ Без автопереключения
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const faqItem = button.parentElement;
+                const isActive = faqItem.classList.contains('active');
+
+                // Закрываем все открытые пункты
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+
+                // Открываем текущий, если он не был активным
+                if (!isActive) {
+                    faqItem.classList.add('active');
+                }
+            });
+        });
+
+        // Burger menu toggle
+        const burgerMenu = document.querySelector('.burger-menu');
+        const navMenu = document.querySelector('.nav-menu');
+
+        burgerMenu.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            burgerMenu.classList.toggle('active');
+        });
+    </script>
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,1663 @@
+/* ======= Основні стилі для сторінки ======= */
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #f8f1e9;
+    color: #333;
+}
+
+/* ======= Хедер ======= */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: linear-gradient(90deg, #e4a859, #d59c45); /* Оригінальний градієнт */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    flex-wrap: wrap;
+    gap: 15px;
+    transition: background 0.3s ease;
+}
+
+/* Стилі для бургер-меню */
+.burger-menu {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    order: -1; /* Переміщуємо бургер-меню на початок */
+    z-index: 1100;
+}
+
+.burger-icon,
+.burger-icon::before,
+.burger-icon::after {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: #fff;
+    transition: all 0.3s ease;
+}
+
+.burger-icon {
+    position: relative;
+}
+
+.burger-icon::before,
+.burger-icon::after {
+    content: '';
+    position: absolute;
+    left: 0;
+}
+
+.burger-icon::before {
+    top: -8px;
+}
+
+.burger-icon::after {
+    bottom: -8px;
+}
+
+.burger-menu.active .burger-icon {
+    background: transparent;
+}
+
+.burger-menu.active .burger-icon::before {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.burger-menu.active .burger-icon::after {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Стилі для текстового логотипу */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.6em;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.logo-text:hover {
+    transform: scale(1.05);
+    color: #f5f5f5;
+}
+
+/* Стилі для навігаційного меню */
+.nav-menu {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.nav-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu li {
+    position: relative;
+    padding: 10px 15px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.nav-menu li:hover {
+    background: rgba(0, 0, 0, 0.1); /* Легкий фон при наведенні */
+    transform: translateY(-3px); /* Підйом при наведенні */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.nav-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: #f0f0f0;
+}
+
+.nav-menu a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+.nav-menu a:hover::after {
+    width: 70%; /* Анімоване підкреслення */
+}
+
+/* Стилі для контактних іконок та перемикача мови */
+.contact-icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: auto;
+}
+
+.icon img {
+    width: 32px;
+    height: 32px;
+    max-width: 100%; /* Адаптивність зображення */
+    object-fit: contain; /* Збереження пропорцій */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.icon:hover img {
+    transform: scale(1.2);
+    opacity: 0.85;
+}
+
+.lang-switcher {
+    display: flex;
+    align-items: center;
+}
+
+.lang-switcher-wrapper {
+    position: relative;
+    padding: 6px 10px;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.2); /* Легкий напівпрозорий фон */
+    transition: all 0.3s ease;
+}
+
+.lang-switcher-wrapper:hover {
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.lang-switcher select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding: 8px 28px 8px 10px;
+    border: none; /* Без обведення */
+    background: transparent;
+    color: #000; /* Чорний колір для тексту UA */
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.lang-switcher select:focus {
+    outline: none;
+    color: #333; /* Темніший відтінок при фокусі */
+}
+
+.lang-switcher-wrapper::after {
+    content: '▼';
+    position: absolute;
+    right: 10px;
+    font-size: 12px;
+    color: #fff;
+    pointer-events: none;
+    transition: color 0.3s ease;
+}
+
+.lang-switcher-wrapper:hover::after {
+    color: #f0f0f0;
+}
+
+/* Адаптивність для хедера */
+@media (max-width: 768px) {
+    .header {
+        padding: 10px 15px;
+        gap: 10px;
+    }
+
+    .burger-menu {
+        display: block;
+    }
+
+    .nav-menu {
+        display: none;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: linear-gradient(90deg, #e4a859, #d59c45);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        z-index: 1000;
+        left: 0; /* Скидаємо зміщення для мобільних */
+        transform: none; /* Скидаємо трансформацію */
+    }
+
+    .nav-menu.active {
+        display: block;
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        padding: 20px 0;
+    }
+
+    .nav-menu li {
+        padding: 8px 12px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .logo-text {
+        font-size: 1.4em;
+    }
+
+    .contact-icons {
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .lang-switcher-wrapper {
+        padding: 5px 8px;
+    }
+
+    .lang-switcher select {
+        font-size: 13px;
+        padding: 6px 25px 6px 8px;
+        color: #000;
+    }
+
+    .icon img {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-text {
+        font-size: 1.2em;
+    }
+
+    .contact-icons {
+        gap: 8px;
+    }
+
+    .icon img {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+/* Темна тема для хедера */
+@media (prefers-color-scheme: dark) {
+    .header {
+        background: linear-gradient(90deg, #b3863e, #a67833);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    }
+
+    .nav-menu {
+        background: linear-gradient(90deg, #b3863e, #a67833);
+    }
+
+    .logo-text {
+        color: #e0e0e0;
+    }
+
+    .logo-text:hover {
+        color: #fff;
+    }
+
+    .nav-menu a {
+        color: #e0e0e0;
+    }
+
+    .nav-menu a:hover {
+        color: #fff;
+    }
+
+    .nav-menu a::after {
+        background-color: #e0e0e0;
+    }
+
+    .lang-switcher-wrapper {
+        background: rgba(255, 255, 255, 0.15);
+    }
+
+    .lang-switcher select {
+        color: #000;
+    }
+
+    .lang-switcher-wrapper::after {
+        color: #e0e0e0;
+    }
+
+    .lang-switcher-wrapper:hover::after {
+        color: #fff;
+    }
+
+    .burger-icon,
+    .burger-icon::before,
+    .burger-icon::after {
+        background: #e0e0e0;
+    }
+
+    .burger-menu.active .burger-icon::before,
+    .burger-menu.active .burger-icon::after {
+        background: #fff;
+    }
+}
+
+/* ======= Секція вітання ======= */
+.welcome {
+    text-align: center;
+    padding: 50px 20px;
+    background: url('../images/fon.jpg') no-repeat center/cover;
+    color: #fff;
+    position: relative;
+}
+
+.welcome::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.welcome h1,
+.welcome p {
+    position: relative;
+    z-index: 2;
+}
+
+.welcome h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.welcome p {
+    font-size: 1.2em;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Адаптивність для секції вітання */
+@media (max-width: 768px) {
+    .welcome {
+        padding: 30px 15px;
+    }
+
+    .welcome h1 {
+        font-size: 2em;
+    }
+
+    .welcome p {
+        font-size: 1em;
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .welcome h1 {
+        font-size: 1.6em;
+    }
+
+    .welcome p {
+        font-size: 0.9em;
+    }
+}
+
+/* ======= Секція FAQ ======= */
+.faq {
+    padding: 40px 20px;
+    background: #fff8f0;
+    text-align: center;
+}
+
+.faq h2 {
+    font-size: 2.4em;
+    margin-bottom: 30px;
+    color: #333;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+}
+
+.faq-list {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    margin-bottom: 10px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+}
+
+.faq-item:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.faq-question {
+    width: 100%;
+    padding: 15px 20px;
+    background: #fff4ea;
+    border: none;
+    text-align: left;
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.faq-question:hover {
+    background: #ff6f61;
+    color: #fff;
+}
+
+.faq-icon {
+    font-size: 1.5em;
+    transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-icon {
+    transform: rotate(45deg); /* Перетворюємо "+" на "×" */
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    padding: 0 20px;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 200px; /* Достатньо для контенту */
+    padding: 15px 20px;
+}
+
+.faq-answer p {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Адаптивність для секції FAQ */
+@media (max-width: 768px) {
+    .faq h2 {
+        font-size: 2em;
+    }
+
+    .faq-question {
+        font-size: 1.1em;
+        padding: 12px 15px;
+    }
+
+    .faq-answer {
+        padding: 0 15px;
+    }
+
+    .faq-item.active .faq-answer {
+        padding: 12px 15px;
+    }
+}
+
+/* ======= Секція регіонів ======= */
+.regions {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.regions h2 {
+    font-size: 2.4em;
+    margin: 0 0 20px;
+    color: #000;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+}
+.region-content {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto 40px;
+    flex-wrap: nowrap; /* Забезпечує розташування тексту та зображення в рядок */
+    justify-content: space-between; /* Текст ліворуч, зображення праворуч */
+}
+.region-text {
+    flex: 1;
+    text-align: left;
+    min-width: 300px;
+}
+
+.region-text p {
+    font-size: 1.2em;
+    color: #555;
+    line-height: 1.5;
+    margin: 0;
+}
+.region-image {
+    flex: 1.5;
+    min-width: 400px; /* Змінено для адаптивності на малих екранах */
+    max-width: 60%; /* Зменшено максимальну висоту */
+    max-height: 600px; /* Повна ширина контейнера */
+}
+.region-image img {
+    width: 100%;
+    height: auto;
+    max-height: 600px;
+    max-width: 100%; /* Адаптивність зображення */
+    object-fit: cover; /* Збереження пропорцій */
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Адаптивність для секції регіонів */
+@media (max-width: 1024px) {
+    .region-content {
+        flex-wrap: wrap; /* Дозволяємо перенос на планшетах */
+        gap: 20px;
+    }
+
+    .region-image {
+        min-width: 100%;
+        max-width: 100%; /* Повна ширина на менших екранах */
+        max-height: 500px;
+    }
+
+    .region-image img {
+        max-height: 500px;
+    }
+}
+
+@media (max-width: 768px) {
+    .region-content {
+        flex-direction: column; /* Колонковий режим для мобільних */
+        align-items: center;
+        gap: 15px;
+    }
+
+    .region-image {
+        max-height: 400px;
+        order: 2; /* Зображення після тексту */
+    }
+
+    .region-image img {
+        max-height: 400px;
+    }
+
+    .region-text {
+        order: 1; /* Текст перед зображенням */
+        text-align: center; /* Центрування тексту на мобільних */
+    }
+}
+
+@media (max-width: 480px) {
+    .region-image {
+        max-height: 300px;
+    }
+
+    .region-image img {
+        max-height: 300px;
+        border-radius: 8px; /* Зменшено радіус для компактності */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.region-cards {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.region-card {
+    width: 260px;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    transition: transform 0.3s, box-shadow 0.3s ease;
+}
+
+.region-card img {
+    width: 100%;
+    height: 240px;
+    max-width: 100%; /* Адаптивність зображення */
+    object-fit: cover; /* Збереження пропорцій */
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.region-card h3 {
+    margin: 16px 0 0;
+    font-size: 1.5em;
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
+}
+
+.region-card:hover {
+    transform: scale(1.05);
+}
+
+/* ======= Секція локації видачі авто ======= */
+.pickup-location {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: #fff4ea;
+    padding: 30px 20px;
+    border-radius: 12px;
+    margin: 40px auto;
+    max-width: 900px;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.05);
+}
+
+.pickup-icon img {
+    width: 48px;
+    height: 48px;
+    max-width: 100%; /* Адаптивність зображення */
+    object-fit: contain; /* Збереження пропорцій */
+}
+
+.pickup-info h2 {
+    margin: 0;
+    font-size: 1.8em;
+    color: #333;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+}
+
+.pickup-info p {
+    margin: 6px 0 0;
+    font-size: 1.2em;
+    color: #555;
+}
+
+/* Адаптивність для секції локації */
+@media (max-width: 768px) {
+    .pickup-location {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 15px;
+        margin: 20px auto;
+    }
+
+    .pickup-icon img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .pickup-info h2 {
+        font-size: 1.6em;
+    }
+
+    .pickup-info p {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .pickup-location {
+        padding: 15px 10px;
+    }
+
+    .pickup-icon img {
+        width: 32px;
+        height: 32px;
+    }
+
+    .pickup-info h2 {
+        font-size: 1.4em;
+    }
+
+    .pickup-info p {
+        font-size: 0.9em;
+    }
+}
+
+/* Секція локації з контейнером */
+.location-container {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    max-width: 1500px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.location-image {
+    flex: 1.5;
+    min-width: 600px;
+    max-height: 800px;
+}
+
+.location-image img {
+    width: 100%;
+    height: auto;
+    max-height: 1000px;
+    max-width: 800px;
+    object-fit: cover; /* Адаптивність зображення */
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.location-content {
+    flex: 1;
+    text-align: left;
+    min-width: 300px;
+}
+
+.location-content h2 {
+    font-size: 2.4em;
+    margin: 0 0 20px;
+    color: #000;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+}
+
+.location-content p {
+    font-size: 1.2em;
+    color: #555;
+    line-height: 1.5;
+    margin: 0 0 20px;
+}
+
+.location-content .pickup-location {
+    font-size: 1.1em;
+    color: #333;
+    margin: 0;
+}
+
+/* Адаптивність для локаційного контейнера */
+@media (max-width: 768px) {
+    .location-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .location-content {
+        text-align: center;
+    }
+
+    .location-image {
+        min-width: 100%;
+    }
+}
+
+/* ======= Секція умов оренди ======= */
+.rental-conditions {
+    padding: 40px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.rental-conditions h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: #333;
+    font-weight: 500;
+}
+
+.condition-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+}
+
+.condition-card {
+    background-color: #fff4ea;
+    border-radius: 12px;
+    padding: 20px;
+    width: 240px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.condition-card:hover {
+    transform: translateY(-5px);
+}
+
+.condition-card img {
+    width: 40px;
+    height: 40px;
+    max-width: 100%; /* Адаптивність зображення */
+    object-fit: contain; /* Збереження пропорцій */
+    margin-bottom: 14px;
+}
+
+.condition-card p {
+    font-size: 16px;
+    color: #444;
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* Адаптивність для умов оренди */
+@media (max-width: 768px) {
+    .rental-conditions {
+        padding: 30px 15px;
+    }
+
+    .rental-conditions h2 {
+        font-size: 1.8em;
+    }
+
+    .condition-card {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .condition-card p {
+        font-size: 14px;
+    }
+
+    .condition-card img {
+        width: 36px;
+        height: 36px;
+    }
+}
+
+@media (max-width: 480px) {
+    .rental-conditions h2 {
+        font-size: 1.6em;
+    }
+
+    .condition-card {
+        padding: 15px;
+    }
+
+    .condition-card img {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+/* ======= Секція автопарку ======= */
+.fleet-section {
+    padding: 40px 20px;
+    background: #fff8f0;
+    text-align: center;
+}
+
+.fleet-section h2 {
+    font-size: 2.4em;
+    margin: 0 0 40px;
+    color: #000;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+}
+
+.fleet-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.car-card {
+    width: calc(33.33% - 20px); /* Три картки в рядку */
+    min-width: 300px;
+    max-width: 400px;
+    background: #fff;
+    border-radius: 12px;
+    padding: 5px;
+    text-align: center;
+    min-height: 380px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.car-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.car-slider {
+    width: 100%;
+    height: 300px;
+    max-height: 300px;
+    border-radius: 12px 12px 0 0;
+    overflow: hidden;
+}
+
+    .car-slider img {
+        width: 100%;
+        height: 100%;
+        max-width: 100%; /* Адаптивність зображення */
+        object-fit: cover; /* Збереження пропорцій */
+        object-position: 50% 80%;
+    }
+
+.car-card h3 {
+    margin: 14px 0 10px;
+    font-size: 1.5em;
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
+}
+
+.car-card p {
+    margin: 8px 12px;
+    font-size: 1em;
+    color: #555;
+    line-height: 1.4;
+}
+
+.car-card .contact-btn {
+    display: inline-block;
+    margin: 12px 0;
+    padding: 10px 20px;
+    background: #ff6f61;
+    color: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.car-card .contact-btn:hover {
+    background: #e55a50;
+}
+
+/* Адаптивність для автопарку */
+@media (max-width: 1024px) {
+    .car-card {
+        width: calc(50% - 15px);
+    }
+}
+
+@media (max-width: 768px) {
+    .fleet-section {
+        padding: 30px 15px;
+    }
+
+    .fleet-section h2 {
+        font-size: 2em;
+    }
+
+    .car-card {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .car-slider {
+        height: 250px;
+    }
+
+    .car-slider img {
+        height: 250px;
+    }
+
+    .car-card h3 {
+        font-size: 1.4em;
+    }
+
+    .car-card p {
+        font-size: 0.95em;
+    }
+}
+
+@media (max-width: 480px) {
+    .fleet-section h2 {
+        font-size: 1.8em;
+    }
+
+    .car-card {
+        min-width: 280px;
+    }
+
+    .car-slider {
+        height: 200px;
+    }
+
+    .car-slider img {
+        height: 200px;
+    }
+
+    .car-card h3 {
+        font-size: 1.3em;
+    }
+
+    .car-card p {
+        font-size: 0.9em;
+    }
+}
+
+/* ======= Секція переваг (слайдер) ======= */
+.slider {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 40px auto;
+    overflow: hidden;
+    height: 300px;
+    border-radius: 16px;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+    background-color: #fff;
+}
+
+.advantages h2 {
+    font-size: 2.4em;
+    margin-top: 0;
+    margin-bottom: 40px;
+    color: #000;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.slider-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.advantage-item {
+    flex: 0 0 100%;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.advantage-item img {
+    width: 80px;
+    height: 80px;
+    max-width: 100%; /* Адаптивність зображення */
+    object-fit: contain; /* Збереження пропорцій */
+    margin-bottom: 20px;
+}
+
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #ff6f61;
+    color: #fff;
+    border: none;
+    padding: 10px 18px;
+    font-size: 2em;
+    border-radius: 6px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.slider-btn.prev {
+    left: 15px;
+}
+
+.slider-btn.next {
+    right: 15px;
+}
+
+.slider-btn:hover {
+    background-color: #ffb400;
+}
+
+/* ======= Секція сторінки 404 ======= */
+.not-found {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #fff;
+}
+
+.not-found h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #ff6f61;
+}
+
+.contact-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: #f28c56;
+    color: #fff;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* ======= Повноекранний слайдер ======= */
+.fullscreen-slider {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.fullscreen-slider.active {
+    display: flex;
+}
+
+.fullscreen-swiper {
+    width: 90%;
+    max-width: 1200px;
+    height: 80vh;
+}
+
+.fullscreen-swiper .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    max-width: 100%; /* Адаптивність зображення */
+    object-fit: contain; /* Збереження пропорцій */
+}
+
+.fullscreen-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 1100;
+}
+
+.fullscreen-close:hover {
+    color: #ccc;
+}
+
+/* Стилі для кнопок слайдера */
+.swiper-button-next,
+.swiper-button-prev {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: #fff;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    color: #9c761e;
+    transform: scale(1.1);
+}
+
+.swiper-theme-color {
+    color: #fff;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    font-size: 12px; /* Виправлено розмір стрілок */
+    font-weight: bold;
+    color: #fff;
+}
+
+.swiper-button-next {
+    right: 10px;
+}
+
+.swiper-button-prev {
+    left: 10px;
+}
+
+.fullscreen-swiper .swiper-button-next,
+.fullscreen-swiper .swiper-button-prev {
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+    color: #fff;
+}
+
+/* Адаптивність для слайдера */
+@media (max-width: 768px) {
+    .swiper-button-next,
+    .swiper-button-prev {
+        width: 20px;
+        height: 20px;
+        font-size: 10px;
+    }
+
+    .fullscreen-swiper {
+        width: 95%;
+        height: 70vh;
+    }
+
+    .fullscreen-swiper .swiper-button-next,
+    .fullscreen-swiper .swiper-button-prev {
+        width: 28px;
+        height: 28px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .fullscreen-swiper {
+        height: 60vh;
+    }
+
+    .fullscreen-close {
+        font-size: 24px;
+        top: 15px;
+        right: 15px;
+    }
+}
+
+/* ======= Модальне вікно ======= */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6); /* Темний напівпрозорий фон */
+    backdrop-filter: blur(5px); /* Скляний ефект розмиття */
+    -webkit-backdrop-filter: blur(5px); /* Підтримка для Safari */
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.4s ease-in-out; /* Плавна анімація появи */
+}
+
+/* Анімація появи модального вікна */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.modal-content {
+    background: rgba(255, 255, 255, 0.95); /* Напівпрозорий білий фон для скляного ефекту */
+    backdrop-filter: blur(10px); /* Розмиття для вмісту */
+    -webkit-backdrop-filter: blur(10px);
+    margin: 5% auto;
+    padding: 20px; /* Зменшено відступи для адаптивності */
+    border-radius: 12px; /* М’які заокруглені кути */
+    width: 90%;
+    max-width: 500px; /* Зменшено максимальну ширину */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    position: relative;
+    animation: slideIn 0.4s ease-in-out; /* Анімація для вмісту */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Тонка межа для скляного ефекту */
+}
+
+/* Анімація для вмісту модального вікна */
+@keyframes slideIn {
+    from { transform: translateY(-30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.close {
+    color: #777;
+    font-size: 24px; /* Зменшено розмір хрестика */
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
+}
+
+.close:hover,
+.close:focus {
+    color: #222;
+    transform: rotate(90deg); /* Легкий поворот хрестика при наведенні */
+    opacity: 0.8;
+}
+
+.modal-content h2 {
+    font-size: 1.8em; /* Зменшено розмір заголовка */
+    margin: 0 0 20px;
+    color: #2a2a2a;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+#bookingForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Зменшено простір між елементами */
+}
+
+#bookingForm label {
+    font-size: 1em; /* Зменшено розмір тексту */
+    color: #333;
+    font-weight: 500;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+#bookingForm input,
+#bookingForm textarea {
+    padding: 12px; /* Зменшено відступи */
+    font-size: 0.95em; /* Зменшено розмір шрифту */
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 8px; /* Зменшено радіус кутів */
+    width: 100%;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.8);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+#bookingForm input:focus,
+#bookingForm textarea:focus {
+    outline: none;
+    border-color: #8B5E3C; /* Mocha Mousse */
+    box-shadow: 0 0 6px rgba(139, 94, 60, 0.3);
+    background: #fff;
+}
+
+#bookingForm textarea {
+    resize: none;
+    height: 100px; /* Зменшено висоту */
+    background-color: rgba(245, 245, 245, 0.9);
+}
+
+.btn {
+    padding: 12px; /* Зменшено відступи */
+    background: linear-gradient(135deg, #8B5E3C 0%, #A67833 100%); /* Градієнт Mocha Mousse */
+    color: #fff;
+    border: none;
+    border-radius: 8px; /* Зменшено радіус кутів */
+    font-size: 1em; /* Зменшено розмір шрифту */
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(139, 94, 60, 0.3);
+    background: linear-gradient(135deg, #A67833 0%, #8B5E3C 100%); /* Зворотний градієнт */
+}
+
+.btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(139, 94, 60, 0.2);
+}
+
+/* Адаптивність для модального вікна */
+@media (max-width: 768px) {
+    .modal-content {
+        width: 90%;
+        max-width: 400px;
+        padding: 15px;
+        margin: 10% auto;
+        border-radius: 10px;
+    }
+
+    .modal-content h2 {
+        font-size: 1.5em;
+        margin-bottom: 15px;
+    }
+
+    .close {
+        font-size: 20px;
+        top: 8px;
+        right: 12px;
+    }
+
+    #bookingForm label {
+        font-size: 0.9em;
+    }
+
+    #bookingForm input,
+    #bookingForm textarea {
+        font-size: 0.9em;
+        padding: 10px;
+        border-radius: 6px;
+    }
+
+    #bookingForm textarea {
+        height: 80px;
+    }
+
+    #bookButton {
+        font-size: 0.95em;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-content {
+        width: 95%;
+        max-width: 320px;
+        padding: 12px;
+        margin: 15% auto;
+        border-radius: 8px;
+    }
+
+    .modal-content h2 {
+        font-size: 1.3em;
+        margin-bottom: 12px;
+    }
+
+    .close {
+        font-size: 18px;
+        top: 6px;
+        right: 10px;
+    }
+
+    #bookingForm label {
+        font-size: 0.85em;
+    }
+
+    #bookingForm input,
+    #bookingForm textarea {
+        font-size: 0.85em;
+        padding: 8px;
+        border-radius: 6px;
+    }
+
+    #bookingForm textarea {
+        height: 70px;
+    }
+
+    #bookButton {
+        font-size: 0.9em;
+        padding: 8px;
+    }
+}
+
+/* Темна тема для модального вікна */
+@media (prefers-color-scheme: dark) {
+    .modal {
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    .modal-content {
+        background: rgba(40, 40, 40, 0.95);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .modal-content h2 {
+        color: #e0e0e0;
+    }
+
+    .close {
+        color: #ccc;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: #fff;
+    }
+
+    #bookingForm label {
+        color: #e0e0e0;
+    }
+
+    #bookingForm input,
+    #bookingForm textarea {
+        background: rgba(60, 60, 60, 0.9);
+        border-color: rgba(255, 255, 255, 0.2);
+        color: #e0e0e0;
+    }
+
+    #bookingForm input:focus,
+    #bookingForm textarea:focus {
+        border-color: #A67833;
+        box-shadow: 0 0 6px rgba(166, 120, 51, 0.4);
+        background: rgba(80, 80, 80, 0.9);
+    }
+
+    #bookButton {
+        background: linear-gradient(135deg, #A67833 0%, #8B5E3C 100%);
+    }
+
+    #bookButton:hover {
+        background: linear-gradient(135deg, #8B5E3C 0%, #A67833 100%);
+        box-shadow: 0 6px 12px rgba(166, 120, 51, 0.4);
+    }
+}
+
+/* ======= Футер ======= */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f1e9;
+    border-top: 1px solid #eee;
+    font-size: 14px;
+    color: #777;
+}
+
+.footer p {
+    margin: 5px 0;
+}
+
+/* Адаптивність для футера */
+@media (max-width: 768px) {
+    .footer {
+        padding: 15px;
+    }
+
+    .footer p {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        padding: 10px;
+    }
+
+    .footer p {
+        font-size: 11px;
+    }
+}
+.button-group {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.btn {
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+#small_image {
+    width: 100%; /* Зображення буде займати всю ширину контейнера */
+    height: 100%; /* Зображення буде займати всю висоту контейнера */
+    object-fit: contain;
+    
+}
+.popup-notification {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    z-index: 1000;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 300px;
+    text-align: center;
+}
+
+.popup-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+}
+
+    .popup-content .close {
+        position: absolute;
+        top: -15px;
+        right: -10px;
+        font-size: 24px;
+        cursor: pointer;
+        color: white;
+    }
