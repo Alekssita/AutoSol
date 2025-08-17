@@ -6,8 +6,8 @@
     <title>Аренда автомобилей в Испании</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/faq.js"></script>
-    <script src="js/language-switcher.js"></script>
+    <script src="js/faq.js" defer></script>
+    <script src="js/language-switcher.js" defer></script>
     <meta name="description" content="Аренда автомобилей в Испании: Валенсия, Коста-Бланка, Андалусия. Доступные цены, быстрое бронирование, поддержка 24/7.">
     <meta name="keywords" content="аренда авто Испания, прокат автомобилей Валенсия, Коста-Бланка, Андалусия">
     <meta name="author" content="Car Rental Spain">
@@ -54,17 +54,26 @@
         <h2>Выберите регион</h2>
         <div class="region-cards">
             <a href="valencia_ru.html" class="region-card">
-                <img src="images/valencia.jpg" alt="Аренда авто в Валенсии">
+                <picture>
+                    <source srcset="img/home/valencia@x.webp" type="image/webp">
+                    <img src="img/home/valencia.jpg" alt="Аренда авто в Валенсии" loading="lazy">
+                </picture>                  
                 <h3>Валенсия</h3>
                 <p>Солнечный город с богатой культурой и живописными пляжами.</p>
             </a>
             <a href="costa-blanca_ru.html" class="region-card">
-                <img src="images/costa-blanca.jpg" alt="Аренда авто на Коста-Бланке">
+                <picture>
+                    <source srcset="img/home/costa-blanca@x.webp" type="image/webp">
+                    <img src="img/home/costa-blanca.jpg" alt="Аренда авто на Коста-Бланке" loading="lazy">
+                </picture>
                 <h3>Коста-Бланка</h3>
                 <p>Белоснежные пляжи и кристально чистое море.</p>
             </a>
             <a href="andalusia_ru.html" class="region-card">
-                <img src="images/andalucia.jpg" alt="Аренда авто в Андалусии">
+                <picture>
+                    <source srcset="img/home/andalucia@x.webp" type="image/webp">
+                    <img src="img/home/andalucia.jpg" alt="Аренда авто в Андалусии" loading="lazy">
+                </picture>
                 <h3>Андалусия</h3>
                 <p>Исторические города, фламенко и уникальная архитектура.</p>
             </a>
@@ -214,6 +223,6 @@
             burgerMenu.classList.toggle('active');
         });
     </script>
-    <script src="js/script.js"></script>
+    <script src="js/script.js" defer></script>
 </body>
 </html>

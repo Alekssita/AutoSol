@@ -6,8 +6,8 @@
     <title>Alquiler de coches en España</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/faq.js"></script>
-    <script src="js/language-switcher.js"></script>
+    <script src="js/faq.js" defer></script>
+    <script src="js/language-switcher.js" defer></script>
     <meta name="description" content="Alquiler de coches en España: Valencia, Costa Blanca, Andalucía. Precios asequibles, reserva rápida, soporte 24/7.">
     <meta name="keywords" content="alquiler de coches España, renta de autos Valencia, Costa Blanca, Andalucía">
     <meta name="author" content="Car Rental Spain">
@@ -56,17 +56,26 @@ Amplia selección de vehículos, precios transparentes, reserva rápida por Tele
         <h2>Elige tu región</h2>
         <div class="region-cards">
             <a href="valencia_es.html" class="region-card">
-                <img src="images/valencia.jpg" alt="Alquiler de coches en Valencia">
+                <picture>
+                    <source srcset="img/home/valencia@x.webp" type="image/webp">
+                    <img src="img/home/valencia.jpg" alt="Alquiler de coches en Valencia" loading="lazy">
+                </picture>                  
                 <h3>Valencia</h3>
                 <p>Ciudad soleada con una rica cultura y playas pintorescas.</p>
             </a>
             <a href="costa-blanca_es.html" class="region-card">
-                <img src="images/costa-blanca.jpg" alt="Alquiler de coches en Costa Blanca">
+                <picture>
+                    <source srcset="img/home/costa-blanca@x.webp" type="image/webp">
+                    <img src="img/home/costa-blanca.jpg" alt="Alquiler de coches en Costa Blanca" loading="lazy">
+                </picture>
                 <h3>La Costa Blanca</h3>
                 <p>Playas blancas y un mar cristalino.</p>
             </a>
             <a href="andalusia_es.html" class="region-card">
-                <img src="images/andalucia.jpg" alt="Alquiler de coches en Andalucía">
+                <picture>
+                    <source srcset="img/home/andalucia@x.webp" type="image/webp">
+                    <img src="img/home/andalucia.jpg" alt="Alquiler de coches en Andalucía" loading="lazy">
+                </picture>
                 <h3>Andalucía</h3>
                 <p>Ciudades históricas, flamenco y arquitectura única.</p>
             </a>
@@ -217,6 +226,6 @@ Amplia selección de vehículos, precios transparentes, reserva rápida por Tele
             burgerMenu.classList.toggle('active');
         });
     </script>
-    <script src="js/script.js"></script>
+    <script src="js/script.js" defer></script>
 </body>
 </html>

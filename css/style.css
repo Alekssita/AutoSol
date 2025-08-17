@@ -369,7 +369,7 @@ body {
 .welcome {
     text-align: center;
     padding: 50px 20px;
-    background: url('../images/fon.jpg') no-repeat center/cover;
+    background: url('../img/home/fon.jpg') no-repeat center/cover;
     color: #fff;
     position: relative;
 }
