@@ -1,0 +1,30 @@
+# Включаем механизм переписывания URL
+RewriteEngine On
+
+# --- Основные редиректы с index_xx.html на красивые адреса ---
+RewriteCond %{THE_REQUEST} /index_ua\.html
+RewriteRule ^index_ua\.html$ /ua [R=301,L]
+
+RewriteCond %{THE_REQUEST} /index_ru\.html
+RewriteRule ^index_ru\.html$ /ru [R=301,L]
+
+RewriteCond %{THE_REQUEST} /index_es\.html
+RewriteRule ^index_es\.html$ /es [R=301,L]
+
+# --- Перенаправляем /ua /ru /es на соответствующие страницы ---
+RewriteRule ^ua/?$ index_ua.html [L]
+RewriteRule ^ru/?$ index_ru.html [L]
+RewriteRule ^es/?$ index_es.html [L]
+
+# --- Страницы по регионам ---
+RewriteRule ^ua/valencia/?$ valencia_ua.html [L]
+RewriteRule ^ru/valencia/?$ valencia_ru.html [L]
+RewriteRule ^es/valencia/?$ valencia_es.html [L]
+
+RewriteRule ^ua/costa-blanca/?$ costa-blanca_ua.html [L]
+RewriteRule ^ru/costa-blanca/?$ costa-blanca_ru.html [L]
+RewriteRule ^es/costa-blanca/?$ costa-blanca_es.html [L]
+
+RewriteRule ^ua/andalusia/?$ andalusia_ua.html [L]
+RewriteRule ^ru/andalusia/?$ andalusia_ru.html [L]
+RewriteRule ^es/andalusia/?$ andalusia_es.html [L]

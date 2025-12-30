@@ -12,6 +12,10 @@
     <meta name="keywords" content="аренда авто Испания, прокат автомобилей Валенсия, Коста-Бланка, Андалусия">
     <meta name="author" content="Car Rental Spain">
     <meta name="robots" content="index, follow">
+    <link rel="alternate" hreflang="uk" href="https://auto-sol.es/index_ua.html" />
+    <link rel="alternate" hreflang="ru" href="https://auto-sol.es/index_ru.html" />
+    <link rel="alternate" hreflang="es" href="https://auto-sol.es/index_es.html" />
+    <link rel="alternate" hreflang="x-default" href="https://auto-sol.es/index_ru.html" />
 </head>
 
 <body>
@@ -194,24 +198,6 @@
         nextBtn.addEventListener('click', () => {
             currentSlide = (currentSlide < slides.length - 1) ? currentSlide + 1 : 0;
             showSlide(currentSlide);
-        });
-
-        // ❌ Без автопереключения
-        document.querySelectorAll('.faq-question').forEach(button => {
-            button.addEventListener('click', () => {
-                const faqItem = button.parentElement;
-                const isActive = faqItem.classList.contains('active');
-
-                // Закрываем все открытые пункты
-                document.querySelectorAll('.faq-item').forEach(item => {
-                    item.classList.remove('active');
-                });
-
-                // Открываем текущий, если он не был активным
-                if (!isActive) {
-                    faqItem.classList.add('active');
-                }
-            });
         });
 
         // Burger menu toggle

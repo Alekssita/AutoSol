@@ -1,12 +1,28 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="refresh" content="0; url=/index_ua.html">
   <title>Auto-Sol Car Rental</title>
+  <script>
+    // Определяем язык браузера
+    const lang = (navigator.language || navigator.userLanguage).substr(0, 2).toLowerCase();
+
+    switch (lang) {
+       case 'ru':
+        window.location.replace('/index_ru.html');
+        break;
+      case 'ua':
+        window.location.replace('/index_ua.html');
+        break;
+      case 'es':
+        window.location.replace('/index_es.html');
+        break;
+      default:
+        window.location.replace('/index_es.html'); // по умолчанию — испанская версия
+    }
+  </script>
 </head>
 <body>
-  <p>Йде перенаправлення на українську версію...  
-     Якщо не перенаправило автоматично, <a href="/index_ua.html">натисніть тут</a>.</p>
+  <p>Redirecting to your language version...</p>
 </body>
 </html>
